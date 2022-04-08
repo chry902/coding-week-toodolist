@@ -1,0 +1,112 @@
+/* Bisogna prevedere un layout diviso in 4 parti:
+1. La pagina avrà un titolo in alto con testo “Priority”;
+2. La seconda parte conterrà la lista degli appuntamenti con valore priorità di 4 o 5; il
+titolo di questo blocco sarà “Appuntamenti ad alta priorità”.
+3. La terza parte conterrà la lista degli appuntamenti con priorità di 2 o 3;
+Il titolo per la terza parte sarà “Appuntamenti importanti”.
+4. La quarta e ultima parte conterrà la lista degli appuntamenti con priorità di 0 o 1; */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container_general{
+    width: 100vw;
+    height: 100vh;
+}
+.contain{
+    flex-wrap: wrap;
+    margin: auto;
+    width: 500px;
+}
+
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem!important;
+    color: rgb(105, 105, 105);
+    
+}
+
+.links_container{
+    list-style: none;
+    display: flex;
+}
+
+.links_container a{
+    text-decoration: none;
+    padding: 1rem;
+    color: rgb(105, 105, 105);;
+}
+
+
+.addTasks input{
+    width: 300px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border-color:rgb(105, 105, 105); ;
+    padding: 0.2rem;
+    box-shadow:4px 4px 4px 4px rgba(135, 135, 135, 0.42);
+}
+
+.list.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 4rem;
+    justify-content: center;
+
+}
+.contain_priority{
+    
+    justify-content: center;
+    flex-direction: column;
+    min-width: 300px;
+    border-radius: 10px;
+    width: 30%;
+    margin: 2rem 8rem;
+
+}
+.contain_priority h2{
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    
+    color: rgb(105, 105, 105);
+}
+.text_contain{
+    border-radius: 10px;
+    width: 100%;
+    height: 450px;
+    overflow: auto;
+    background-color: rgba(245, 247, 247, 1);;
+    box-shadow:4px 4px 4px 4px rgba(135, 135, 135, 0.42);
+}
+
+.f_size_h2{
+    height: 50px;
+}
+
+.item{
+    
+    font-size: 13px;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.delet_task{
+    cursor: pointer;
+}
+
+.cont5, .cont3, .cont1, .contDel{
+    display: none
+}
+
+.display{
+    display: flex!important ;
+}
