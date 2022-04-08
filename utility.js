@@ -21,8 +21,22 @@ export function createPriority(data) {
         data[`priority`] = Math.floor(Math.random() * 6);
     });
     render(data);
+    searchInput(data)
 }
 
+export function searchInput(data) {
+    const searchInpt = document.querySelector("#search_priority")
+    searchInpt.addEventListener("keyup", () => {
+        const search = document.querySelector("#search_priority");
+        const value = search.value;
+        const arrFilter = data.filter((data) =>
+            data.title.toLowerCase().includes(value.toLowerCase()));
+
+        console.log("---->", arrFilter);
+        render(arrFilter)
+
+    });
+};
 
 const importanti = document.querySelector("#appImportanti");
 const routine = document.querySelector("#appRoutine");
