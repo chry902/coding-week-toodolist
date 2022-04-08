@@ -61,8 +61,9 @@ h1{
 
 }
 .contain_priority{
-    display: flex;
+    
     justify-content: center;
+    flex-direction: column;
     min-width: 300px;
     border-radius: 10px;
     width: 30%;
@@ -100,4 +101,12 @@ h1{
 
 .delet_task{
     cursor: pointer;
+}
+
+.cont5, .cont3, .cont1, .contDel{
+    display: none
+}
+
+.display{
+    display: flex!important ;
 }
